@@ -1,0 +1,12 @@
+Endpoints
+Upload CSV/Excel File
+
+POST /contacts/upload
+Headers: Authorization: Bearer <token>
+Form Data: file (binary)
+Response: { "message": "File processed successfully." }
+Download Contacts as CSV/Excel
+
+GET /contacts/download
+Headers: Authorization: Bearer <token>
+Response: Binary file download (CSV/Excel).

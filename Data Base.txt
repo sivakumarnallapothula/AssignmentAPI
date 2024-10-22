@@ -1,0 +1,22 @@
+Schema Design
+Users Table
+
+id: UUID
+username: STRING
+email: STRING UNIQUE
+passwordHash: STRING
+createdAt: TIMESTAMP
+updatedAt: TIMESTAMP
+Contacts Table
+
+id: UUID
+userId: UUID (FK to Users)
+name: STRING
+email: STRING UNIQUE
+phone: STRING
+address: STRING
+timezone: STRING
+isDeleted: BOOLEAN (default false)
+createdAt: TIMESTAMP
+updatedAt: TIMESTAMP
+Implement transactions for batch processing and file uploads to ensure data integrity.

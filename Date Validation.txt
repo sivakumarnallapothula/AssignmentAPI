@@ -1,0 +1,3 @@
+Implement validation using a library like Joi or Yup to ensure the following:
+User inputs (registration, contact creation, etc.) are validated.
+Email uniqueness is enforced for both users and contacts.

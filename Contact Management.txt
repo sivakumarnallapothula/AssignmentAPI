@@ -1,0 +1,55 @@
+Endpoints
+Add Contact
+
+POST /contacts
+Headers: Authorization: Bearer <token>
+Request:
+{
+  "name": "string",
+  "email": "string",
+  "phone": "string",
+  "address": "string",
+  "timezone": "string"
+}
+
+Response: { "id": "uuid", "createdAt": "datetime" }
+Retrieve Contacts
+
+GET /contacts
+Headers: Authorization: Bearer <token>
+Query Params: ?name=string&email=string&timezone=string&sort=string
+Response: [ { "id": "uuid", "name": "string", ... } ]
+Update Contact
+
+PUT /contacts/{id}
+Headers: Authorization: Bearer <token>
+Request:
+{
+  "name": "string",
+  "email": "string",
+  "phone": "string",
+  "address": "string",
+  "timezone": "string"
+}
+Response: { "message": "Contact updated." }
+Soft Delete Contact
+
+DELETE /contacts/{id}
+Headers: Authorization: Bearer <token>
+Response: { "message": "Contact deleted." }
+Batch Add/Update Contacts
+
+POST /contacts/batch
+Headers: Authorization: Bearer <token>
+Request:
+[
+  {
+    "name": "string",
+    "email": "string",
+    "phone": "string",
+    "address": "string",
+    "timezone": "string"
+  },
+  ...
+]
+Response: { "message": "Batch processing completed." }

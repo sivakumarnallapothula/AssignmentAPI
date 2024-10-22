@@ -1,0 +1,5 @@
+Store all timestamps in UTC.
+When retrieving contacts, convert timestamps to the user’s specified timezone using a library like Moment.js or date-fns.
+Implement date range filtering:
+GET /contacts?startDate=YYYY-MM-DD&endDate=YYYY-MM-DD
+Response: [ { "id": "uuid", ... } ]

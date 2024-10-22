@@ -1,0 +1,11 @@
+Rate Limiting: Implement rate limiting on sensitive endpoints (e.g., /auth/login, /auth/register) to prevent abuse.
+Password Security: Use a hashing library like bcrypt to securely store passwords.
+Input Sanitization: Ensure that all user inputs are sanitized to avoid SQL injection and other attacks.
+Example Workflow
+User Registration: User sends a POST request to /auth/register. A verification email is sent.
+Email Verification: User clicks on the link in the email, which hits the /auth/verify/{token} endpoint.
+User Login: User logs in via /auth/login, receiving a JWT.
+Add Contact: User adds a contact via /contacts.
+Batch Processing: User uploads a CSV file of contacts via /contacts/upload.
+Retrieve Contacts: User retrieves contacts with filtering and sorting options via /contacts.
+Download Contacts: User downloads all contacts as a CSV file via /contacts/download.
